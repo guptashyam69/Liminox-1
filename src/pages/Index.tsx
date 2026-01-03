@@ -27,15 +27,8 @@ const Index = () => {
     <PageLayout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] bg-gradient-hero overflow-hidden flex items-center">
-        {/* Enhanced background with glowing orbs */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Large glowing orb - top right */}
-          <div className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-primary/20 blur-[100px] dark:bg-primary/10" />
-          {/* Medium glowing orb - bottom left */}
-          <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] rounded-full bg-accent/20 blur-[80px] dark:bg-accent/10" />
-          {/* Small accent orb - center */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-water-medium/10 blur-[60px]" />
-          {/* Animated ripples */}
+        {/* Animated water ripple effect */}
+        <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 animate-ripple" />
           <div className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-accent/10 animate-ripple delay-700" />
         </div>
@@ -115,19 +108,15 @@ const Index = () => {
       </section>
 
       {/* Highlights Section */}
-      <section className="py-16 bg-background relative">
-        {/* Subtle background glow for highlights */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full bg-primary/5 blur-[80px] dark:bg-primary/10" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="flex items-start gap-4 p-6 bg-card/80 backdrop-blur-sm rounded-xl shadow-card hover:shadow-water transition-all border border-border/50 dark:border-primary/10 dark:hover:border-primary/30"
+                className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-card hover:shadow-water transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-water flex items-center justify-center flex-shrink-0 shadow-water">
+                <div className="w-12 h-12 rounded-xl bg-gradient-water flex items-center justify-center flex-shrink-0">
                   <item.icon className="text-primary-foreground" size={24} />
                 </div>
                 <div>
