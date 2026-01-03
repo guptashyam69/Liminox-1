@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import FeaturesPage from "./pages/FeaturesPage";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import BenefitsPage from "./pages/BenefitsPage";
+import AchievementsPage from "./pages/AchievementsPage";
 import PricingPage from "./pages/PricingPage";
 import FAQPage from "./pages/FAQPage";
 import ContactPage from "./pages/ContactPage";
@@ -25,6 +26,7 @@ const AnimatedRoutes = () => {
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/how-it-works" element={<HowItWorksPage />} />
         <Route path="/benefits" element={<BenefitsPage />} />
+        <Route path="/achievements" element={<AchievementsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
