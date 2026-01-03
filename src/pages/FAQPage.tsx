@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { PageLayout } from "@/components/PageLayout";
 
 const faqs = [
   {
@@ -38,43 +39,47 @@ const faqs = [
   },
 ];
 
-export const FAQ = () => {
+const FAQPage = () => {
   return (
-    <section id="faq" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary font-medium mb-4">FAQ</p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Frequently Asked{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-water">
-              Questions
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Got questions? We've got answers. If you can't find what you're 
-            looking for, feel free to contact us.
-          </p>
-        </div>
+    <PageLayout>
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-primary font-medium mb-4">FAQ</p>
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Frequently Asked{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-water">
+                Questions
+              </span>
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Got questions? We've got answers. If you can't find what you're 
+              looking for, feel free to contact us.
+            </p>
+          </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-card border border-border rounded-xl px-6 shadow-card"
-              >
-                <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-card border border-border rounded-xl px-6 shadow-card"
+                >
+                  <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary py-5">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </PageLayout>
   );
 };
+
+export default FAQPage;
