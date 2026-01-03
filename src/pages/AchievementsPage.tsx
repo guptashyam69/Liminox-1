@@ -1,12 +1,5 @@
-import { Award, Users, Droplets, Globe, Trophy, Star, TrendingUp, Building2 } from "lucide-react";
+import { Award, Trophy, Star, Building2 } from "lucide-react";
 import { PageLayout } from "@/components/PageLayout";
-
-const stats = [
-  { icon: Droplets, value: "50,000+", label: "Tanks Installed" },
-  { icon: Users, value: "100,000+", label: "Happy Customers" },
-  { icon: Globe, value: "25+", label: "Cities Covered" },
-  { icon: TrendingUp, value: "99.9%", label: "Customer Satisfaction" },
-];
 
 const awards = [
   {
@@ -63,24 +56,6 @@ const AchievementsPage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-water flex items-center justify-center">
-                  <stat.icon className="text-primary-foreground" size={28} />
-                </div>
-                <p className="font-display text-3xl md:text-4xl font-bold text-foreground mb-1">
-                  {stat.value}
-                </p>
-                <p className="text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Awards Section */}
       <section className="py-16 bg-secondary/30">
