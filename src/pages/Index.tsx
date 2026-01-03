@@ -27,10 +27,21 @@ const Index = () => {
     <PageLayout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] bg-gradient-hero overflow-hidden flex items-center">
-        {/* Animated water ripple effect */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/10 animate-ripple" />
-          <div className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-accent/10 animate-ripple delay-700" />
+        {/* Enhanced animated water ripple effects */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Large background ripples */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/15 animate-ripple-slow" />
+          <div className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-accent/20 animate-ripple" style={{ animationDelay: "0.5s" }} />
+          <div className="absolute bottom-1/4 left-1/3 w-80 h-80 rounded-full bg-primary/10 animate-ripple-slow" style={{ animationDelay: "1s" }} />
+          
+          {/* Small decorative ripples */}
+          <div className="absolute top-1/2 left-1/6 w-32 h-32 rounded-full bg-water-medium/30 animate-ripple" style={{ animationDelay: "1.5s" }} />
+          <div className="absolute bottom-1/3 right-1/5 w-40 h-40 rounded-full bg-accent/15 animate-ripple" style={{ animationDelay: "2s" }} />
+          
+          {/* Glowing orbs */}
+          <div className="absolute top-20 right-1/4 w-4 h-4 rounded-full bg-primary/60 animate-pulse-glow" />
+          <div className="absolute bottom-32 left-1/4 w-3 h-3 rounded-full bg-accent/50 animate-pulse-glow" style={{ animationDelay: "0.7s" }} />
+          <div className="absolute top-1/2 right-20 w-2 h-2 rounded-full bg-primary/70 animate-pulse-glow" style={{ animationDelay: "1.2s" }} />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24">
