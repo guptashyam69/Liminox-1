@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/components/ThemeProvider";
 import liminoxLogo from "@/assets/liminox-logo.png";
 
 const navLinks = [
@@ -16,7 +15,6 @@ const navLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
   return (
@@ -27,7 +25,7 @@ export const Navbar = () => {
             <img 
               src={liminoxLogo} 
               alt="Liminox" 
-              className={`h-10 md:h-12 ${theme === "dark" ? "brightness-0 invert" : ""}`} 
+              className="h-10 md:h-12" 
             />
           </Link>
 
@@ -46,19 +44,6 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "light" ? (
-                <Moon size={18} className="text-foreground" />
-              ) : (
-                <Sun size={18} className="text-foreground" />
-              )}
-            </button>
 
             <Button className="bg-gradient-water shadow-water hover:opacity-90 transition-opacity">
               Get Started
@@ -66,25 +51,12 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "light" ? (
-                <Moon size={18} className="text-foreground" />
-              ) : (
-                <Sun size={18} className="text-foreground" />
-              )}
-            </button>
-            <button
-              className="p-2 text-foreground"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button
+            className="p-2 text-foreground md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
