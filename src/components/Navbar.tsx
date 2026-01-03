@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import liminoxLogo from "@/assets/liminox-logo.png";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Benefits", href: "/benefits" },
@@ -44,10 +44,6 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-
-            <Button className="bg-gradient-water shadow-water hover:opacity-90 transition-opacity">
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,9 +73,6 @@ export const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button className="bg-gradient-water shadow-water hover:opacity-90 transition-opacity w-full mt-2">
-                Get Started
-              </Button>
             </div>
           </div>
         )}
