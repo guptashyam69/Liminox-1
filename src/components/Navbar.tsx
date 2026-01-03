@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ThemeProvider";
 import liminoxLogo from "@/assets/liminox-logo.png";
 
 const navLinks = [
+  { label: "Home", href: "/", icon: Home },
   { label: "Features", href: "/features" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Benefits", href: "/benefits" },
@@ -20,14 +21,14 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center">
             <img 
               src={liminoxLogo} 
               alt="Liminox" 
-              className={`h-10 md:h-12 ${theme === "dark" ? "brightness-0 invert" : ""}`} 
+              className={`h-10 md:h-12 transition-all duration-300 ${theme === "dark" ? "brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]" : ""}`} 
             />
           </Link>
 
