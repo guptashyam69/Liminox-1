@@ -8,83 +8,82 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 200 20% 98%;
-    --foreground: 210 50% 10%;
+    --background: 0 0% 100%;
+    --foreground: 210 30% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 50% 10%;
+    --card-foreground: 210 30% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 50% 10%;
+    --popover-foreground: 210 30% 20%;
 
-    --primary: 195 85% 45%;
+    --primary: 180 70% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 30% 95%;
-    --secondary-foreground: 210 50% 15%;
+    --secondary: 200 20% 96%;
+    --secondary-foreground: 210 30% 20%;
 
-    --muted: 200 20% 94%;
-    --muted-foreground: 210 20% 45%;
+    --muted: 200 15% 94%;
+    --muted-foreground: 210 15% 50%;
 
-    --accent: 185 75% 50%;
+    --accent: 175 75% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 25% 88%;
-    --input: 200 25% 88%;
-    --ring: 195 85% 45%;
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 180 70% 45%;
 
     --radius: 0.75rem;
 
     /* Custom Liminox tokens */
-    --water-light: 195 90% 95%;
-    --water-medium: 195 80% 70%;
-    --water-dark: 200 85% 25%;
-    --gradient-water: linear-gradient(135deg, hsl(195 85% 45%) 0%, hsl(185 75% 50%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(200 20% 98%) 0%, hsl(195 50% 95%) 100%);
-    --shadow-water: 0 10px 40px -10px hsl(195 85% 45% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(210 50% 10% / 0.08);
+    --water-light: 180 50% 95%;
+    --water-medium: 180 60% 70%;
+    --water-dark: 200 70% 30%;
+    --gradient-water: linear-gradient(135deg, hsl(180 70% 45%) 0%, hsl(175 75% 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(200 20% 98%) 100%);
+    --shadow-water: 0 10px 40px -10px hsl(180 70% 45% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(210 30% 20% / 0.08);
   }
 
   .dark {
-    --background: 210 60% 12%;
-    --foreground: 200 30% 95%;
+    --background: 210 15% 15%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 55% 16%;
-    --card-foreground: 200 30% 95%;
+    --card: 210 15% 18%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 55% 16%;
-    --popover-foreground: 200 30% 95%;
+    --popover: 210 15% 18%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 190 85% 55%;
-    --primary-foreground: 210 60% 8%;
+    --primary: 175 80% 50%;
+    --primary-foreground: 210 15% 10%;
 
-    --secondary: 210 50% 20%;
-    --secondary-foreground: 200 30% 95%;
+    --secondary: 210 15% 22%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 50% 22%;
-    --muted-foreground: 200 25% 65%;
+    --muted: 210 15% 25%;
+    --muted-foreground: 210 10% 65%;
 
-    --accent: 185 80% 60%;
-    --accent-foreground: 210 60% 8%;
+    --accent: 175 80% 50%;
+    --accent-foreground: 210 15% 10%;
 
     --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 45% 25%;
-    --input: 210 45% 25%;
-    --ring: 190 85% 55%;
+    --border: 210 15% 25%;
+    --input: 210 15% 25%;
+    --ring: 175 80% 50%;
 
-    --water-light: 200 50% 20%;
-    --water-medium: 190 75% 45%;
-    --water-dark: 195 85% 65%;
-    --gradient-water: linear-gradient(135deg, hsl(190 85% 55%) 0%, hsl(185 80% 60%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(210 60% 12%) 0%, hsl(205 55% 18%) 100%);
-    --shadow-water: 0 10px 40px -10px hsl(190 85% 55% / 0.25);
-    --shadow-card: 0 4px 20px -4px hsl(190 85% 55% / 0.1);
-    --glow-primary: 0 0 60px hsl(190 85% 55% / 0.15);
+    --water-light: 210 15% 20%;
+    --water-medium: 175 70% 45%;
+    --water-dark: 175 80% 55%;
+    --gradient-water: linear-gradient(135deg, hsl(175 80% 50%) 0%, hsl(170 75% 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 15% 15%) 0%, hsl(210 15% 18%) 100%);
+    --shadow-water: 0 10px 40px -10px hsl(175 80% 50% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(175 80% 50% / 0.1);
   }
 }
 
