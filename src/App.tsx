@@ -11,7 +11,7 @@ import BenefitsPage from "./pages/BenefitsPage";
 import AchievementsPage from "./pages/AchievementsPage";
 import PricingPage from "./pages/PricingPage";
 import FAQPage from "./pages/FAQPage";
-import ContactPage from "./pages/ContactPage";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +29,7 @@ const AnimatedRoutes = () => {
         <Route path="/achievements" element={<AchievementsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/faq" element={<FAQPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
