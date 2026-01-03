@@ -67,7 +67,7 @@ const Index = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact">
+                <Link to="/pricing">
                   <Button
                     size="lg"
                     className="bg-gradient-water shadow-water hover:opacity-90 transition-all text-lg px-8 py-6"
